@@ -1,31 +1,44 @@
 #main.py
 #Huvudprogram
-
+from card import Card
+from deck import Deck
 import random
-from cards import Cards
-from players import Players
 
-def getDeck()
+def shuffle_test():
+    #Shuffle Test--------------------------------
+    deck = Deck() #Create a deck of cards
+    print('----------------Before Shuffle------------------')
+    deck.print_deck()  #Print the newly created deck of cards
+    deck.shuffle()
+    print('----------------After Shuffle------------------')
+    deck.print_deck()  #Print the shuffled cards
+    #Shuffle Test-----------------------------------
 
-def displayHands()
+def hand_test():
+    deck = Deck()
+    deck.shuffle()
+    c1 = deck.draw_card()
+    c2 = deck.draw_card()
+    c3 = deck.draw_card()
+    h = Hand([c1, c2,  c3])
+    c4 = deck.draw_card()
+    h.add(c4)
+    print ({h})
+    print ({h.value()})
 
-def getHandValue()
-
-def displayCards()
-    
-def gevMove()
 
 def main() -> None:
     print('Welcome to Blackjack, Swedish style!')
 
 #--------------GAME LOOP-----------#
-    while True:
-        deck = getDeck()
+
 
 
 
 if __name__ == "__main__":
     main()
+    # shuffle_test()
+    hand_test()
 
 
 
