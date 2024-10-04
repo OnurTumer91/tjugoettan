@@ -15,21 +15,21 @@ from game_engine import GameEngine
 import random
 
 def main():
-    game = GameEngine([]) 
+    game = GameEngine([]) #Iniialize class
     game.display_intro() #Fancy introduciton
 
     print("🎮 How many players at the table? 🎯" ) #Exclusing the dealer
     num_players = int(input("Number of players: "))
     
-    player_names = []
+    player_names = [] #Register player names
     for i in range(num_players):
         name = input(f"Enter player {i + 1} name: ")
         player_names.append(name)
 
-    game = GameEngine(player_names) #Initialize game
-    game.play()
+    game = GameEngine(player_names) #Initialize the game with the player names
+    game.play() #Start the game
 
-    game.game_over_animation() #Ending Ascii
+    game.game_over_animation() #Ending Ascii fanciness
 
 
 if __name__ == "__main__": #Main
